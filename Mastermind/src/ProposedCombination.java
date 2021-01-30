@@ -7,7 +7,7 @@ public class ProposedCombination extends Combination {
 
 	public void getFromUser() {
 		Console console = new Console();
-		Color[] combination = new Color[4];
+		Color[] combination = new Color[Combination.combinationSize];
 		String askedCombination;
 		boolean error = false;
 		do {

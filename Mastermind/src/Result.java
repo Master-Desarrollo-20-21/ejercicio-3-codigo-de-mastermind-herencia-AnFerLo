@@ -5,7 +5,7 @@ public class Result {
 	private int totalWhite;
 
 	public boolean isWinner() {
-		return totalBlack == 4;
+		return totalBlack == Combination.combinationSize;
 	}
 
 	public void addBlack() {

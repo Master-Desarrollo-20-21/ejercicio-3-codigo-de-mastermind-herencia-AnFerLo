@@ -17,7 +17,7 @@ public class Game {
 
 	public void play() {
 		console.out("----- MASTERMIND -----\n");
-		this.secretCombination.generate();
+//		this.secretCombination.generate();
 		this.showStatus();
 		do {
 			this.proposedCombination[turn] = new ProposedCombination();

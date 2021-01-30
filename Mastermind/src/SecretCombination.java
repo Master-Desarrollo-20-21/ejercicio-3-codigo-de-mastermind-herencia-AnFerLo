@@ -1,9 +1,12 @@
+import java.util.Collections;
+import java.util.Random;
 
 public class SecretCombination extends Combination {
 
 	@Override
 	public void show() {
-		new Console().out("xxxx\n");
+		String xs = String.join("", Collections.nCopies(Combination.combinationSize, "x"));
+		new Console().out(xs + "\n");
 	}
 
 	public SecretCombination() {
@@ -31,8 +34,19 @@ public class SecretCombination extends Combination {
 	}
 
 	public void generate() {
-		Color[] combo = new Color[] { Color.RED, Color.GREEN, Color.ORANGE, Color.PINK };
+		Color[] combo = new Color[Combination.combinationSize];
+		String colors = Color.getValidColors();
+		int valueToDelete;
+		Random random = new Random();
+		do {
+			valueToDelete = random.nextInt(colors.length());
+			colors = colors.substring(0,valueToDelete) + colors.substring(valueToDelete+1, colors.length());
+		} while (colors.length() != Combination.combinationSize);
+		for (int i=0;i<Combination.combinationSize;i++) {
+			combo[i] = Color.valueOf(colors.charAt(i));
+		}
 		this.setCombination(combo);
+		new Console().out(colors);
 	}
 
 }

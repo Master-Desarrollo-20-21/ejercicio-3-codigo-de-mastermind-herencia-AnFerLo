@@ -46,7 +46,6 @@ public class SecretCombination extends Combination {
 			combo[i] = Color.valueOf(colors.charAt(i));
 		}
 		this.setCombination(combo);
-		new Console().out(colors);
 	}
 
 }

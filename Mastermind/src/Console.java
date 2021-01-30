@@ -184,20 +184,5 @@ private void salir ()
 
 private static BufferedReader b = new BufferedReader(new InputStreamReader(System.in));
 
-public static void main (String args[])
-{
-	Console gestor = new Console();
-	
-	System.out.println("ENTERO");
-	gestor.out(gestor.inInt());
-	System.out.println();
-	System.out.println("CARACTER");
-	gestor.out(gestor.inChar());
-	System.out.println();
-	System.out.println("REAL");
-	gestor.out(gestor.inFloat());
-	System.out.println();
-	System.out.println("BOOLEAN");
-	gestor.out(gestor.inBoolean());
-}
+
 }
